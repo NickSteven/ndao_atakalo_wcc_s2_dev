@@ -16,5 +16,5 @@ model Echange {
   contact Int
   nom_kilalao String
   atakalo String
-  statut Boolean
+  statut Boolean @default(true)
 }
