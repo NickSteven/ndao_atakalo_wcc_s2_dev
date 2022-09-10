@@ -11,10 +11,10 @@ datasource db {
 }
 
 model Echange {
-  id_echange Int @id @unique @default(autoincrement())
-  nom String
-  contact Int
+  id_echange  Int     @id @unique @default(autoincrement())
+  nom         String
+  contact     String
   nom_kilalao String
-  atakalo String
-  statut Boolean @default(true)
+  atakalo     String
+  statut      Boolean @default(true)
 }

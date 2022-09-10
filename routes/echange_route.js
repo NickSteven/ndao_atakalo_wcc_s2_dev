@@ -1,7 +1,9 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
-const echangeController = require('../controllers/echange_controller')
+const echangeController = require("../controllers/echange_controller");
 
-router.post('/', echangeController.creerEchange)
+router.post("/echange", echangeController.creerEchange);
+router.get("/echanges", echangeController.getAllEchange);
+router.put("/desactive/:id", echangeController.desactiveEchange);
 
 module.exports = router;
