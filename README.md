@@ -42,3 +42,5 @@ To post in echanges : set theses payload to pass in the link http://localhost:40
 Desactivate echange:
 Method : 'PUT'
 To desactivate an echange, use this link and pass an id : http://localhost:4000/echange/desactivate/id
+
+### techzara_wcc_s2_2022
