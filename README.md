@@ -8,7 +8,7 @@ Require Node >= 14.17
 
 Clone this repository to your computer
 
-Install all dependancies using ### `npm install`
+Install all dependancies using `npm install`
 
 ## Setting up the database
 
