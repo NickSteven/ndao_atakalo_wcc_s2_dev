@@ -4,6 +4,7 @@ CREATE TABLE `Echange` (
     `nom` VARCHAR(191) NOT NULL,
     `contact` VARCHAR(191) NOT NULL,
     `nom_kilalao` VARCHAR(191) NOT NULL,
+    `photos` VARCHAR(191) NOT NULL,
     `atakalo` VARCHAR(191) NOT NULL,
     `statut` BOOLEAN NOT NULL DEFAULT true,
 

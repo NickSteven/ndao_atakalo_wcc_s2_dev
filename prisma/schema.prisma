@@ -15,6 +15,7 @@ model Echange {
   nom         String
   contact     String
   nom_kilalao String
+  photos      String
   atakalo     String
   statut      Boolean @default(true)
 }

@@ -5,24 +5,37 @@ const { echange: Echange } = prisma;
 
 // insert echange
 const creerEchange = async (req, res) => {
-  let contact = req.body.contact;
-  if (/^[0-9]+$/.test(contact) && contact.length == 10) {
-    await Echange.create({
-      data: req.body,
-    })
-      .then(() => {
-        res.status(201).send({
-          message: "Echange ajouté !",
-        });
+  var copy = new Array();
+
+  var nom = req.body.nom;
+  var contact = req.body.contact;
+  var kilalao = req.body.nom_kilalao;
+  req.body.photos = req.file.path;
+  var atakalo = req.body.atakalo;
+
+  if (nom != "" && kilalao != "" && contact != "" && atakalo != "") {
+    if (/^[0-9]+$/.test(contact) && contact.length == 10) {
+      await Echange.create({
+        data: req.body,
       })
-      .catch((error) => {
-        res.status(500).send({
-          message: error.message || "Une erreur est survenue !",
+        .then(() => {
+          res.status(201).send({
+            message: "Echange ajouté !",
+          });
+        })
+        .catch((error) => {
+          res.status(500).send({
+            message: error.message || "Une erreur est survenue !",
+          });
         });
+    } else {
+      return res.status(400).send({
+        message: "Format contact non-valide !",
       });
+    }
   } else {
     return res.status(400).send({
-      message: "Format contact non-valide !",
+      message: "Veuillez compléter les champs vides !",
     });
   }
 };
