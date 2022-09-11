@@ -43,4 +43,4 @@ Desactivate echange:
 Method : 'PUT'
 To desactivate an echange, use this link and pass an id : http://localhost:4000/echange/desactivate/id
 
-### techzara_wcc_s2_2022
+### tchz_wcc_s2_2022
